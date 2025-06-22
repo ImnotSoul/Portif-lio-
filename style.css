@@ -1,560 +1,214 @@
+/* CSS ATUALIZADO PARA MOBILE FIRST */
 
 html {
-      scroll-behavior: smooth;
-        overflow-x: hidden;
-}
-
-body::-webkit-scrollbar {
-      display: none; /* Chrome/Safari */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-      margin: 0;
-        padding: 0;
-          font-family: 'Roboto Mono', monospace;
-            color: white;
-              background-image: url('images/background.jpg');
-                background-size: cover;
-                  background-position: center;
-                    background-repeat: no-repeat;
-                      height: 100vh;
-                        display: flex;
-                          flex-direction: column;
-                            justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  background-color: #000;
+  min-height: 100vh;
 }
 
+/* HEADER MOBILE */
 header {
-      display: flex;
-        justify-content: space-between;
-          align-items: center;
-            padding: 20px 40px;
-               /* leve transparência para o topo */
-}
-
-header nav {
-        position: relative;
-          left: -435px;
-            margin-top: 20px;  /* Move a nav 50px pra direita */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 100;
 }
 
 .logo {
-      font-size: 18px;
-        font-weight: bold;
-}
-
-.logo span {
-      color: #aaa;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 nav ul {
-      list-style: none;
-        display: flex;
-          gap: 20px;
-            margin: 0;
-              padding: 0;
-                
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul li a {
-      text-decoration: none;
-        color: #fff;
-          font-size: 16px;
-            border-bottom: 1px solid transparent;
-              transition: border-bottom 0.3s;
+  font-size: 0.9rem;
 }
 
-nav ul li a:hover {
-      border-bottom: 1px solid #fff;
-}
-
+/* HERO MOBILE */
 .hero {
-      display: flex;
-        flex-direction: column;
-          height: 100vh;
-            padding: 40px;
-              color: white;
-                /* Apenas um fundo transparente para teste */
-                  
+  padding: 120px 20px 60px;
+  text-align: center;
 }
 
-html {
-      scroll-behavior: smooth;
-}
-/* H1 separado para poder mover */
 .hero h1 {
-      font-size: 110px;
-        margin-left: 350px;
-          position: relative;
-            top: 50px; /* exemplo para mover para baixo */
-              overflow: hidden;
-                white-space: nowrap;
-                  animation: typing 3.5s steps(40, end);
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 1.2;
 }
 
-/* P separado para poder mover */
 .hero p {
-      font-size: 19px;
-        margin-left: 375px ; /* Exemplo: margem direita para mover para a esquerda */
-          position: relative;
-            top: -80px; /* exemplo para mover para cima */
-              
+  font-size: 1rem;
+  margin: 15px 0 0;
 }
 
-.section {
-      min-height: 100vh;  /* Cada seção ocupa a tela inteira */
-        padding: 50px;
-            /* Fundo escuro com transparência (troque se quiser) */
-                opacity: 0;
-                  transform: translateY(20px);
-                    transition: all 0.6s ease-out;
-                      
-}
-
-.section.visible {
-      opacity: 1;
-        transform: translateY(0);
-}
-
-/* Animação personalizada para cada seção */
-#home.visible {
-      transition-delay: 0.2s;
-}
-
-#about.visible {
-      transition-delay: 0.4s;
-}
-
-#skills.visible {
-      transition-delay: 0.6s;
-}
-
-.section h2 {
-      font-size: 50px;
-        margin-bottom: 20px;
-}
-
-.section p {
-      font-size: 18px;
-}
-
-#about, #about * {
-      font-family: 'Montserrat', sans-serif;
-        font-weight: 100;
-}
-
+/* ABOUT MOBILE */
 #about {
-      margin-top: 250px;
-
-        
-}
-
-#about h2 {
-      position: relative;
-        margin-top: -60px;
-          color: #fafafa;
+  padding: 60px 20px;
 }
 
 .section-subtitle {
-      position: relative;
-        display: flex;
-          align-items: center;
-            font-family: 'Inter', sans-serif;
-              font-weight: 300;
-                font-size: 14px;
-                  color: rgb(255, 255, 255);
-                    letter-spacing: 2px;
-                      text-transform: uppercase;
-                        gap: 10px;
-                          top: 200px;
-                            
-
-                            /* Aqui você controla a distância dele para cima e para baixo */
-                              margin-bottom: 20px; /* separa do h2 */
-                                /* Se quiser mexer na posição vertical, pode usar margin-top ou margin-bottom */
+  font-size: 0.8rem;
+  margin: 0 auto 30px;
+  max-width: 200px;
 }
 
-.section-subtitle::before,
-.section-subtitle::after {
-      content: "";
-        flex-grow: 1;
-          height: 1px;
-            background-color: rgb(248, 243, 243);
+#about h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-#about h3{
-        font-family: 'Manrope', sans-serif;
-            font-weight: 500; /* Medium */
-                position: relative;
-                    font-size: 45px;
-                        margin-top: 100px;
+#about h3 {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-/* Efeito de partículas */
+#about h4 {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* SKILLS MOBILE */
+.skills-container {
+  padding: 30px 20px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.skills-grid {
+  grid-template-columns: 1fr;
+}
+
+.skill-list {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* WORKS MOBILE */
+#works {
+  padding: 60px 20px;
+}
+
+.works-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 30px auto;
+  width: 90%;
+}
+
+/* CONTACTS MOBILE */
+#contacts {
+  padding: 60px 20px;
+}
+
+.contacts-grid {
+  grid-template-columns: 1fr;
+  max-width: 300px;
+  margin-top: 30px;
+}
+
+/* PARTÍCULAS */
 #particles-js {
-      position: fixed;
-        width: 100%;
-          height: 100%;
-            top: 0;
-              left: 0;
-                z-index: -1; /* Garante que fique atrás de tudo */
-                  background-color: #000; /* Cor de fundo escura */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.content-wrapper {
-      position: relative;
-        z-index: 1; /* Garante que o conteúdo fique na frente */
-}
-
-#about h4{
-        font-family: 'Montserrat', sans-serif;
-            align-items: center;
-                position: relative;
-                    max-width: 500px; /* Ajuste esse valor para controlar a largura */
-                      line-height: 1.6;
-                        margin-left: 650px;
-                          color: rgb(255, 255, 255);
-                            margin-top: -100px;
-                              font-size: 18px;
-}
+/* MEDIA QUERIES PARA TABLET */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
   
-#skills {
-          background: transparent !important;
+  .logo {
+    margin-bottom: 0;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contacts-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+  }
 }
 
-    .skills-container {
-              background: rgba(10, 10, 10, 0.85); /* Fundo opaco apenas nas colunas */
-                    border-radius: 12px;
-                          padding: 40px;
-                                max-width: 1000px;
-                                      margin: 0 auto;
-                                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
+/* MEDIA QUERIES PARA DESKTOP */
+@media (min-width: 1024px) {
+  .hero {
+    text-align: left;
+    padding: 150px 80px;
+  }
+  
+  .hero h1 {
+    font-size: 5rem;
+    max-width: 600px;
+    margin-left: 50px;
+  }
+  
+  .hero p {
+    margin-left: 50px;
+    max-width: 500px;
+  }
+  
+  #about h4 {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .section {
+    padding: 80px;
+  }
+}
 
-        .skills-grid {
-                  display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                              gap: 40px;
-                                    justify-items: center; /* Centraliza as colunas */
-        }
+/* ANIMAÇÕES */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-            .skill-category {
-                      width: 100%;
-            }
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
 
-                .skill-category h3 {
-                          font-family: 'Roboto Mono', monospace;
-                                color: #666;
-                                      margin-bottom: 30px;
-                                            font-size: 1.1rem;
-                                                  letter-spacing: 1px;
-                                                        text-align: center;
-                                                              border-bottom: 1px solid #333;
-                                                                    padding-bottom: 10px;
-                }
-
-                    .skill-list {
-                              list-style: none;
-                                    padding: 0;
-                                          margin: 0;
-                                                display: flex;
-                                                      flex-direction: column;
-                                                            align-items: center;
-                                                                  gap: 25px;
-                    }
-
-                        .skill-item {
-                                  display: flex;
-                                        flex-direction: column;
-                                              align-items: center;
-                                                    gap: 8px;
-                                                          transition: all 0.3s ease;
-                                                                width: 100%;
-                        }
-
-                            .skill-icon {
-                                      width: 48px; /* Ícones maiores */
-                                            height: 48px;
-                                                  object-fit: contain;
-                                                        filter: grayscale(30%) brightness(0.9);
-                                                              transition: all 0.3s ease;
-                            }
-
-                                .skill-item:hover .skill-icon {
-                                          filter: grayscale(0%) brightness(1.2);
-                                                transform: scale(1.1);
-                                }
-
-                                    .skill-name {
-                                              font-size: 0.9rem;
-                                                    color: #e0e0e0;
-                                                          font-family: 'Roboto Mono', monospace;
-                                                                text-align: center;
-                                    }
-
-                                        @keyframes typing {
-                                              from { width: 0 }
-                                                to { width: 100% }
-                                        }
-
-                                            /* Responsivo */
-                                                @media (max-width: 768px) {
-                                                          .skills-grid {
-                                                                    grid-template-columns: 1fr;
-                                                                            gap: 50px;
-                                                          }
-                                                                
-                                                                .skills-container {
-                                                                            padding: 30px 20px;
-                                                                }
-                                                            }
-                                                            #contacts {
-                                                                  
-                                                                  text-align: center;
-                                                            }
-
-                                                            .contacts-grid {
-                                                                  display: grid;
-                                                                    grid-template-columns: repeat(3, 1fr);
-                                                                      gap: 30px;
-                                                                        max-width: 900px;
-                                                                          margin: 0 auto;
-                                                                            align-items: center;
-                                                            }
-
-                                                            .contact-card {
-                                                                  height: 180px;
-                                                                    display: flex;
-                                                                      flex-direction: column;
-                                                                        justify-content: center;
-                                                                          align-items: center;
-                                                                            border-radius: 12px;
-                                                                              transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                                                                                position: relative;
-                                                                                  overflow: hidden;
-                                                                                    margin-top: 130px;
-                                                            }
-
-                                                            #contacts h2 {
-                                                                  font-family: 'Montserrat', sans-serif;
-                                                            }
-
-                                                            /* Cards individuais */
-                                                            .linkedin { background: rgba(10, 102, 194, 0.15); }
-                                                            .github { background: rgba(24, 23, 23, 0.15); }
-                                                            .triple { background: rgba(212, 12, 12, 0.1); }
-
-                                                            .contact-card img {
-                                                                  width: 50px;
-                                                                    height: 50px;
-                                                                      margin-bottom: 15px;
-                                                                        transition: transform 0.3s;
-                                                            }
-
-                                                            .contact-card span {
-                                                                  font-family: 'Roboto Mono', monospace;
-                                                                    font-size: 0.9rem;
-                                                                      color: #e0e0e0;
-                                                            }
-
-                                                            /* Card triplo */
-                                                            .triple {
-                                                                  display: grid;
-                                                                    grid-template-columns: repeat(3, 1fr);
-                                                                      padding: 0;
-                                                                        background: transparent !important;
-                                                                          gap: 1px;
-                                                            }
-
-                                                            .triple-item {
-                                                                  height: 100px;
-                                                                    padding: 30px;
-                                                                      background: rgba(255, 255, 255, 0.05);
-                                                                        display: flex;
-                                                                          justify-content: center;
-                                                                            align-items: center;
-                                                                              transition: all 0.3s;
-                                                            }
-
-                                                            .triple-item img {
-                                                                  width: 30px;
-                                                                    height: 30px;
-                                                                      margin: 0;
-                                                            }
-
-                                                            /* Efeitos hover */
-                                                            .contact-card:hover {
-                                                                  transform: translateY(-8px);
-                                                                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-                                                            }
-
-                                                            .linkedin:hover { background: rgba(10, 102, 194, 0.25); }
-                                                            .github:hover { background: rgba(24, 23, 23, 0.25); }
-                                                            .triple-item:hover { background: rgba(255, 255, 255, 0.1); }
-
-                                                            .triple-item:hover img {
-                                                                  transform: scale(1.2);
-                                                            }
-
-                                                            /* Responsivo */
-                                                            @media (max-width: 768px) {
-                                                                  .contacts-grid {
-                                                                        grid-template-columns: 1fr;
-                                                                            max-width: 300px;
-                                                                  }
-                                                                    
-                                                                    .contact-card {
-                                                                            height: 120px;
-                                                                    }
-                                                                      
-                                                                      .triple {
-                                                                            grid-template-columns: repeat(3, 1fr);
-                                                                                height: 80px;
-                                                                      }
-                                                                    }
-
-                                                                    .works-grid {
-                                                                          display: grid;
-                                                                            grid-template-columns: repeat(3, 1fr);
-                                                                              gap: 30px;
-                                                                                max-width: 1000px;
-                                                                                  margin: 50px auto;
-                                                                    }
-
-                                                                    .category-card {
-                                                                          background: rgba(255, 255, 255, 0.05);
-                                                                            border-radius: 12px;
-                                                                              padding: 30px;
-                                                                                text-align: center;
-                                                                                  cursor: pointer;
-                                                                                    transition: all 0.3s ease;
-                                                                                      border: 1px solid rgba(255, 255, 255, 0.1);
-                                                                    }
-
-                                                                    .category-card:hover {
-                                                                          transform: translateY(-5px);
-                                                                            background: rgba(255, 255, 255, 0.1);
-                                                                              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-                                                                    }
-
-                                                                    .category-icon img {
-                                                                          width: 60px;
-                                                                            height: 60px;
-                                                                              margin-bottom: 20px;
-                                                                                filter: grayscale(30%) brightness(0.9);
-                                                                                  transition: all 0.3s;
-                                                                    }
-
-                                                                    .category-card:hover .category-icon img {
-                                                                          filter: grayscale(0%) brightness(1.2);
-                                                                            transform: scale(1.1);
-                                                                    }
-
-                                                                    .category-card h3 {
-                                                                          font-family: 'Montserrat', sans-serif;
-                                                                            font-size: 1.5rem;
-                                                                              margin-bottom: 10px;
-                                                                    }
-
-                                                                    .category-card p {
-                                                                          font-family: 'Manrope', sans-serif;
-                                                                            color: #aaa;
-                                                                              font-size: 0.9rem;
-                                                                                margin-bottom: 15px;
-                                                                    }
-
-                                                                    .project-count {
-                                                                          font-family: 'Roboto Mono', monospace;
-                                                                            font-size: 0.8rem;
-                                                                              color: #666;
-                                                                                margin-top: 10px;
-                                                                    }
-
-                                                                    /* Container de projetos (será preenchido dinamicamente) */
-                                                                    .projects-container {
-                                                                          display: none;
-                                                                            grid-template-columns: repeat(2, 1fr);
-                                                                              gap: 30px;
-                                                                                margin-top: 50px;
-                                                                    }
-
-                                                                    /* Responsivo */
-                                                                    @media (max-width: 768px) {
-                                                                          .works-grid {
-                                                                                grid-template-columns: 1fr;
-                                                                          }
-                                                                            
-                                                                            .projects-container {
-                                                                                    grid-template-columns: 1fr;
-                                                                            }
-                                                                        }
-
-                                                                        .project-item {
-                                                                              background: rgba(20, 20, 20, 0.7);
-                                                                                padding: 25px;
-                                                                                  border-radius: 8px;
-                                                                                    transition: all 0.3s;
-                                                                        }
-
-                                                                        .project-item:hover {
-                                                                              transform: translateY(-5px);
-                                                                                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-                                                                        }
-
-                                                                        .project-item h4 {
-                                                                              font-family: 'Montserrat', sans-serif;
-                                                                                font-size: 1.2rem;
-                                                                                  margin-bottom: 10px;
-                                                                        }
-
-                                                                        .tech-used {
-                                                                              font-family: 'Roboto Mono', monospace;
-                                                                                color: #aaa;
-                                                                                  font-size: 0.9rem;
-                                                                                    margin-bottom: 15px;
-                                                                        }
-
-                                                                        .project-link {
-                                                                              font-family: 'Manrope', sans-serif;
-                                                                                color: #fff;
-                                                                                  text-decoration: none;
-                                                                                    font-size: 0.9rem;
-                                                                                      transition: all 0.3s;
-                                                                                        display: inline-block;
-                                                                        }
-
-                                                                        .project-link:hover {
-                                                                              color: #ccc;
-                                                                                transform: translateX(5px);
-                                                                        }
-
-                                                                        #works h2{
-                                                                              position: relative;
-                                                                                font-family: 'Montserrat', sans-serif;
-                                                                                  margin-left: 350px;
-                                                                                    margin-top: -30px;
-                                                                                      
-
-                                                                        }
-
-
-
-                                                                        /* Responsivo para celulares */
-                                                                        @media (max-width: 768px) {
-                                                                              .hero h1 {
-                                                                                    font-size: 40px;
-                                                                                        margin: 0 auto;
-                                                                                            top: 0;
-                                                                                                text-align: center;
-                                                                              }
-                                                                                
-                                                                                .hero p {
-                                                                                        font-size: 14px;
-                                                                                            margin: 10px auto 0 auto;
-                                                                                                top: 0;
-                                                                                                    text-align: center;
-                                                                                }
-                                                                            }
-                                                                            
-                              
-            
-                                  
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
